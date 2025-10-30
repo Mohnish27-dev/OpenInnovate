@@ -61,5 +61,13 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password);
 };
 
+
+userSchema.methods.omitPassword = function () {
+    const obj = this.toObject();
+    delete obj.password;
+    return obj;
+};
+
+
 export const User = mongoose.model("User", userSchema);
 export default User;

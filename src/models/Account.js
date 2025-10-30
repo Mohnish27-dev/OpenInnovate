@@ -9,7 +9,7 @@ const accountSchema = new mongoose.Schema({
     provider: {
         type: String,
         required: true,
-        enum: ['google', 'github', 'twitter']
+        enum: ['google', 'github', 'twitter', 'email']
     },
     providerId: {
         type: String,
@@ -21,7 +21,7 @@ const accountSchema = new mongoose.Schema({
     },
     accessToken: {
         type: String,
-        required: true
+        default: null
     },
     refreshToken: {
         type: String,

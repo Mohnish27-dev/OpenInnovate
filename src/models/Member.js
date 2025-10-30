@@ -5,6 +5,16 @@ const memberSchema = new mongoose.Schema({
         ref: "User",
         required: true
     },
+    workspaceId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Workspace",
+        required: true
+    },
+    role: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Roles",
+        required: true
+    },
     joinedAt: {
         type: Date,
         default: Date.now

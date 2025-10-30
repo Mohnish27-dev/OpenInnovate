@@ -1,8 +1,13 @@
 import express from 'express'
 import cors from "cors"
-import session from "cookie-session"
+import session from "express-session"
 import dotenv from 'dotenv'
 import { connectDB } from './libs/connectDB.js';
+import './src/config/passport.js';
+import passport from 'passport';
+import authroutes from './src/routes/auth-route.js';
+import userroutes from './src/routes/user-route.js';
+import isAuthenticated from './middlewares/isAuthenticatedMiddleware.js';
 dotenv.config()
 const { errorHandler } = await import('./middlewares/errorHandler.js');
 
@@ -16,22 +21,32 @@ app.use(cors({
 }))
 
 app.use(session({
-    name: 'session',
-    keys: ['key1', 'key2'],
-    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    secret: process.env.SESSION_SECRET || 'your-secret-key-change-this-in-production',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        secure: process.env.NODE_ENV === 'production', // true in production with HTTPS
+        httpOnly: true,
+        maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    }
 }))
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get('/', async(req, res, next) => {
     try {
-        throw new Error('Test error handling')
         res.status(200).json({ message: 'API is running' })
 
     } catch (error) {
         next(error)
     }
 })
-app.use(errorHandler)
 
+app.use(`${process.env.BASE_PATH}/auth`,authroutes )
+app.use(`${process.env.BASE_PATH}/user`,isAuthenticated,userroutes )
+
+app.use(errorHandler)
 
 app.listen(8000, async () => {
     console.log('Server is running on port 8000')

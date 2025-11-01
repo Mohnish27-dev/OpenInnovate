@@ -1,6 +1,9 @@
 import "./landingPage.css";
 import GlareHover from '../../components/GlareHover';
 import { Link,useNavigate } from "react-router-dom";
+import LanPricing from "../../components/LanPricing";
+import LanWorks from "../../components/LanWorks";
+import LanKeyFeatur from "../../components/LanKeyFeatur";
 const LandingPage = () => {
       const navigate = useNavigate();
   return (
@@ -15,7 +18,7 @@ const LandingPage = () => {
              <div className="bg-linear-to-b from-[#51D685] to-[#B5F415] rounded-4xl ml-175 flex items-center justify-center p-0.5 relative top-2 h-fit">
              <button  onClick={() => navigate("/login")} className="text-amber-50 rounded-4xl bg-[#090909] px-5 py-2 ">Login</button>
             </div>
-            <button className="text-black font-bold rounded-4xl h-fit p-2.5 relative right-8 top-2 bg-linear-to-b from-[#41D195] to-[#C9FF05]">Register</button>
+            <button onClick={() => navigate("/register")} className="text-black font-bold rounded-4xl h-fit p-2.5 relative right-8 top-2 bg-linear-to-b from-[#41D195] to-[#C9FF05]">Register</button>
           </div>
           </nav>
         </div>
@@ -40,7 +43,7 @@ const LandingPage = () => {
             width='350px'
             height='230px'
             background=""
-            className="rotate-12 shadow-2xl/100 shadow-[#3DCA86] bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
+            className="rotate-12 hover:cursor-default shadow-2xl/100 shadow-[#3DCA86] bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
           />
           <GlareHover
             glareColor="#36b274"
@@ -52,7 +55,7 @@ const LandingPage = () => {
             background=""
             width="436px"
             height="320px"
-            className="shadow-2xl/100 shadow-[#3DCA86] bg-linear-[135deg,#000000,#021D11_10%,#0D492C_20%,#000000_40%,#071C15_50%,#0D492C_70%,#000000_90%,#021D11_100%]"
+            className="shadow-2xl/100 hover:cursor-default shadow-[#3DCA86] bg-linear-[135deg,#000000,#021D11_10%,#0D492C_20%,#000000_40%,#071C15_50%,#0D492C_70%,#000000_90%,#021D11_100%]"
           />
           <GlareHover
             glareColor="#36b274"
@@ -62,7 +65,7 @@ const LandingPage = () => {
             transitionDuration={1000}
             playOnce={false}
             background=""
-            className="rotate-168 shadow-2xl/100 shadow-[#3DCA86] bg-linear-[120deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]"
+            className="rotate-168 hover:cursor-default shadow-2xl/100 shadow-[#3DCA86] bg-linear-[120deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]"
             height="230px"
             width="350px"
 
@@ -72,181 +75,10 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className=" bg-[#090909] min-h-screen min-w-screen flex flex-col items-center justify-start p-15 gap-5">
-        <div className="bg-[#37BC7E] rounded-4xl p-0.5">
-          <button className="bg-[#031D14] rounded-4xl px-7 font-bold py-1 text-[#F5E9CB]">Key Features</button>
-        </div>
-        <h1 className="relative text-[#FFFFFF] tracking-wider  text-5xl">Why Choose <span className="italic">OpenInnovate</span>?</h1>
-        <section className="grid grid-cols-4 grid-rows-3 gap-5 pt-5">
-          <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=''
-            background=""
-            className="  h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
-          /> <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=''
-            background=""
-            className="  h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
-          /> <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=''
-            background=""
-            className="  h-auto border-2 w-auto col-span-2 row-span-2 col-start- bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
-          /> <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=''
-            background=""
-            className="  col-span-2 col-start-1 h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
-          /> <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=''
-            background=""
-            className="  col-span-2 col-start-1 h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
-          /> <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width='500px'
-            height='230px'
-            background=""
-            className="border-2 col-span-2 bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
-          />
-        </section>
-      </div>
-      <div className=" bg-[#090909] min-h-screen min-w-screen flex flex-col items-center justify-start p-15 gap-5">
-        <div className="bg-[#37BC7E] rounded-4xl p-0.5">
-          <button className="bg-[#031D14] rounded-4xl px-7 font-bold py-1 text-[#F5E9CB]">How It Works</button>
-        </div>
-        <h1 className="relative text-[#FFFFFF] tracking-wider  text-5xl">Get Started In Simple Steps</h1>
-        <section className="grid grid-cols-10 grid-rows-2 gap-5">
-          <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=""
-            background=""
-            className=" col-span-4 h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
-          />
-          <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width='500px'
-            height='230px'
-            background=""
-            className="col-span-6   h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
-          />
-          <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=''
-            background=""
-            className="col-span-5  h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
-          />
-          <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=''
-            background=""
-            className="col-span-5 h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
-          />
-        </section>
-      </div>
-      <div className=" bg-[#090909] min-h-screen min-w-screen flex flex-col items-center justify-start p-15 gap-5">
-        <div className="bg-[#37BC7E] rounded-4xl p-0.5">
-          <button className="bg-[#031D14] rounded-4xl px-7 font-bold py-1 text-[#F5E9CB]">Pricing</button>
-        </div>
-        <h1 className="relative text-[#FFFFFF] tracking-wider  text-5xl">Plans for Everyone</h1>
-        <section className="grid grid-cols-3 grid-rows-6 gap-5 p-2 pr-4">
-          <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=''
-            background=""
-            className="row-span-5 h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
-          />
-          <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=''
-            background=""
-            className="row-span-5 h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
-          />
-          <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width='350px'
-            height='500px'
-            background=""
-            className="row-span-5 h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
-          />
-        </section>
-      </div>
+      <LanKeyFeatur/>
+      <LanWorks/>
+     <LanPricing/>
+     
     </>
   )
 }

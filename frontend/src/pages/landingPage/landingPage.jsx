@@ -1,28 +1,31 @@
 import "./landingPage.css";
 import GlareHover from '../../components/GlareHover';
+import { Link,useNavigate } from "react-router-dom";
 const LandingPage = () => {
-
-
+      const navigate = useNavigate();
   return (
+
     <>
       <div className=" bg-linear-to-b from-[#090909] from-50% to-[#3ED194] min-h-screen min-w-screen ">
         <div className="h-screen min-w-screen max-h-[80vh] bg-[#090909] rounded-b-full blur-[90px] "></div>
         <div className="bg-linear-to-br from-[#000000] to-[#3CC88E] p-[2.5px] rounded-[48px] w-screen max-w-270 left-30 absolute top-10 ">
+          <nav>
           <div className="bg-[#000000]/90 flex flex-row justify-between rounded-[48px] p-3">
             <h1 className="text-amber-50 relative left-20"><span className="text-green-500 font-bold relative left-2 font-[Young Serif] text-2xl">Open</span> <br></br><span className="font-bold font-[Young Serif] text-xl">Innovate</span></h1>
-            <div className="bg-linear-to-b from-[#51D685] to-[#B5F415] rounded-4xl p-0.5 ml-150 flex items-center justify-center">
-              <button className="text-amber-50 rounded-4xl bg-[#090909] p-6 ">Login</button>
+             <div className="bg-linear-to-b from-[#51D685] to-[#B5F415] rounded-4xl ml-175 flex items-center justify-center p-0.5 relative top-2 h-fit">
+             <button  onClick={() => navigate("/login")} className="text-amber-50 rounded-4xl bg-[#090909] px-5 py-2 ">Login</button>
             </div>
-            <button className="text-black font-bold rounded-4xl px-6 bg-linear-to-b from-[#41D195] to-[#C9FF05]">Register</button>
+            <button className="text-black font-bold rounded-4xl h-fit p-2.5 relative right-8 top-2 bg-linear-to-b from-[#41D195] to-[#C9FF05]">Register</button>
           </div>
+          </nav>
         </div>
         <div className="font-[Montserrat] flex flex-col items-center justify-center font-normal text-white absolute top-50 left-80">
           <h1 className="text-center text-4xl">Turn your big idea into real-world Innovation<br></br> with Right People</h1>
           <h1>Register your projects to build a perfect team or join existing to become a perfect team</h1>
           <div className="flex flex-row">
-            <button className="bg-linear-to-b from-[#51D685] to-[#B5F415] p-6 m-2 rounded-4xl text-black font-bold text-lg">Register Your Project</button>
-            <div className="bg-linear-to-b from-[#51D685] to-[#B5F415] p-0.5 m-2 rounded-4xl ">
-              <button className="text-amber-50 rounded-4xl bg-[#090909] p-6 font-bold  ">Join a Project </button>
+            <button className="bg-linear-to-b from-[#51D685] to-[#B5F415] h-fit p-3 relative top-2 m-2 rounded-4xl text-black font-bold text-lg">Register Your Project</button>
+            <div className="bg-linear-to-b from-[#51D685] to-[#B5F415] relative top-2 p-0.5 h-fit m-2  rounded-4xl ">
+              <button className="text-amber-50 rounded-4xl bg-[#090909] px-7 py-3  font-bold  ">Join a Project </button>
             </div>
           </div>
         </div>

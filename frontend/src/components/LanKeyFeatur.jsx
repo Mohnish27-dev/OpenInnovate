@@ -19,7 +19,19 @@ const LanKeyFeatur = () => {
             width=''
             height=''
             background=""
-            className="  h-auto border-2 hover:cursor-default w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
+            className="  h-auto border-2 hover:cursor-default w-aut bg-linear-[135deg,#000000_5%,#36B27450_15%,#000000_30%,#36B27450_45%,#000000_60%,#2F936060_75%,#000000_90%]"
+            />
+           <GlareHover
+            glareColor="#36b274"
+            glareOpacity={0.6}
+            glareAngle={-45}
+            glareSize={400}
+            transitionDuration={1000}
+            playOnce={false}
+            width=''
+            height=''
+            background=""
+            className="  h-auto border-2 hover:cursor-default w-aut bg-linear-[135deg,#000000_5%,#36B27450_15%,#000000_30%,#36B27450_45%,#000000_60%,#2F936060_75%,#000000_90%] "
           /> <GlareHover
             glareColor="#36b274"
             glareOpacity={0.6}
@@ -30,7 +42,7 @@ const LanKeyFeatur = () => {
             width=''
             height=''
             background=""
-            className="  h-auto border-2 hover:cursor-default w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
+            className="  h-auto border-2 hover:cursor-default w-auto col-span-2 row-span-2 col-start- bg-linear-[135deg,#000000_5%,#36B27450_15%,#000000_30%,#36B27450_45%,#000000_60%,#2F936060_75%,#000000_90%] "
           /> <GlareHover
             glareColor="#36b274"
             glareOpacity={0.6}
@@ -41,7 +53,7 @@ const LanKeyFeatur = () => {
             width=''
             height=''
             background=""
-            className="  h-auto border-2 hover:cursor-default w-auto col-span-2 row-span-2 col-start- bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
+            className="  col-span-2 hover:cursor-default col-start-1 h-auto border-2 w-aut bg-linear-[135deg,#000000_5%,#36B27450_15%,#000000_30%,#36B27450_45%,#000000_60%,#2F936060_75%,#000000_90%] "
           /> <GlareHover
             glareColor="#36b274"
             glareOpacity={0.6}
@@ -52,18 +64,7 @@ const LanKeyFeatur = () => {
             width=''
             height=''
             background=""
-            className="  col-span-2 hover:cursor-default col-start-1 h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
-          /> <GlareHover
-            glareColor="#36b274"
-            glareOpacity={0.6}
-            glareAngle={-45}
-            glareSize={400}
-            transitionDuration={1000}
-            playOnce={false}
-            width=''
-            height=''
-            background=""
-            className="  col-span-2 hover:cursor-default col-start-1 h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
+            className="  col-span-2 hover:cursor-default col-start-1 h-auto border-2 w-aut bg-linear-[135deg,#000000_5%,#36B27450_15%,#000000_30%,#36B27450_45%,#000000_60%,#2F936060_75%,#000000_90%] "
           /> <GlareHover
             glareColor="#36b274"
             glareOpacity={0.6}
@@ -74,7 +75,7 @@ const LanKeyFeatur = () => {
             width='500px'
             height='230px'
             background=""
-            className="border-2 hover:cursor-default col-span-2 bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%] "
+            className="border-2 hover:cursor-default col-span-2 bg-linear-[135deg,#000000_5%,#36B27450_15%,#000000_30%,#36B27450_45%,#000000_60%,#2F936060_75%,#000000_90%] "
           />
         </section>
       </div>

@@ -18,7 +18,7 @@ const LanPricing = () => {
             width=''
             height=''
             background=""
-            className="row-span-5 hover:cursor-default h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
+            className="row-span-5 hover:cursor-default h-auto border-2 w-aut bg-linear-[135deg,#000000_5%,#36B27450_15%,#000000_30%,#36B27450_45%,#000000_60%,#2F936060_75%,#000000_90%]  "
           />
           <GlareHover
             glareColor="#36b274"
@@ -30,7 +30,7 @@ const LanPricing = () => {
             width=''
             height=''
             background=""
-            className="row-span-5 hover:cursor-default h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
+            className="row-span-5 hover:cursor-default h-auto border-2 w-aut bg-linear-[135deg,#000000_5%,#36B27450_15%,#000000_30%,#36B27450_45%,#000000_60%,#2F936060_75%,#000000_90%]  "
           />
           <GlareHover
             glareColor="#36b274"
@@ -42,7 +42,7 @@ const LanPricing = () => {
             width='350px'
             height='500px'
             background=""
-            className="row-span-5 hover:cursor-default h-auto border-2 w-aut bg-linear-[135deg,#082B1F,#021D11_10%,#083325_25%,#0D492C_30%,#245A42_35%,#071C15_55%,#1B4C35_70%,#021D11_100%]  "
+            className="row-span-5 hover:cursor-default h-auto border-2 w-aut bg-linear-[135deg,#000000_5%,#36B27450_15%,#000000_30%,#36B27450_45%,#000000_60%,#2F936060_75%,#000000_90%]  "
           />
         </section>
       </div>

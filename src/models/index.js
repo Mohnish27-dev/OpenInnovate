@@ -1,14 +1,14 @@
 /**
  * Global Models Registry
  * Import all models here and export them as named exports
- * Usage: import { User, Workspace, Project, Task, Role, Member, Account } from './src/models/index.js'
+ * Usage: import { User, Workspace, Project, Task, Roles, Member, Account } from './src/models/index.js'
  */
 
 import User from './User.js';
 import Workspace from './Workspace.js';
 import Project from './Projects.js';
 import Task from './Task.js';
-import Role from './Roles.js';
+import Roles from './Roles.js';
 import Member from './Member.js';
 import Account from './Account.js';
 
@@ -18,7 +18,7 @@ export {
     Workspace,
     Project,
     Task,
-    Role,
+    Roles,
     Member,
     Account
 };
@@ -29,7 +29,7 @@ export default {
     Workspace,
     Project,
     Task,
-    Role,
+    Roles,
     Member,
     Account
 };

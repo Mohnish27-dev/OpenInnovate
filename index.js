@@ -8,6 +8,9 @@ import passport from 'passport';
 import authroutes from './src/routes/auth-route.js';
 import userroutes from './src/routes/user-route.js';
 import isAuthenticated from './middlewares/isAuthenticatedMiddleware.js';
+import workspaceRoute from './src/routes/workspace-route.js';
+import memberRoute from './src/routes/member-route.js';
+import projectRoute from './src/routes/project-route.js';
 dotenv.config()
 const { errorHandler } = await import('./middlewares/errorHandler.js');
 
@@ -45,6 +48,9 @@ app.get('/', async(req, res, next) => {
 
 app.use(`${process.env.BASE_PATH}/auth`,authroutes )
 app.use(`${process.env.BASE_PATH}/user`,isAuthenticated,userroutes )
+app.use(`${process.env.BASE_PATH}/workspace`,isAuthenticated,workspaceRoute)
+app.use(`${process.env.BASE_PATH}/member`,isAuthenticated,memberRoute)
+app.use(`${process.env.BASE_PATH}/project`,isAuthenticated,projectRoute)
 
 app.use(errorHandler)
 

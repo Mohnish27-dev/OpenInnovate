@@ -1,0 +1,42 @@
+import { createProjectSchema } from "../validation/project-validation.js"
+import { workspaceIdSchema } from "../validation/workspace-validation.js";
+import { createProjectService ,getAllProjectsInWorkspaceService} from "../services/project-service.js";
+import { getMemberRoleInWorkspaceService } from "../services/member-services.js";
+import { Permissions } from "../enum/role-enum.js";
+import { roleGuard } from "../utils/roleGuard.js";
+
+export const createProjectController = async (req, res) => {
+    const body=createProjectSchema.parse(req.body);
+    const workspaceId=workspaceIdSchema.parse(req.params.workspaceId);
+
+    const userId=req.user?._id;
+    const {rolename}=await getMemberRoleInWorkspaceService(userId,workspaceId);
+    roleGuard(rolename,[Permissions.CREATE_PROJECT]);
+
+    const {project}=await createProjectService(userId,workspaceId,body);
+
+    res.status(200).json({message:"Project created successfully",project});
+}
+ 
+export const getAllProjectsInWorkspaceController=async(req,res)=>{
+    const workspaceId=workspaceIdSchema.parse(req.params.workspaceId);
+    const userId=req.user?._id;
+    const {rolename}=await getMemberRoleInWorkspaceService(userId,workspaceId);
+    roleGuard(rolename,[Permissions.VIEW_ONLY]);
+
+    const pageSize=parseInt(req.query.pageSize)||10
+    const pageNumber=parseInt(req.query.pageNumber)||1
+
+    const {projects,totalCount,totalPages,skip}=await getAllProjectsInWorkspaceService(workspaceId,pageSize,pageNumber);
+
+    res.status(200).json({message:"Projects retrieved successfully",projects,
+        pagination:{
+            totalCount,
+            pageSize,
+            pageNumber,
+            totalPages,
+            skip,
+            limit:pageSize
+        }
+    });
+}
